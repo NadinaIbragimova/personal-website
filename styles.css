@@ -1,0 +1,304 @@
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Full width and height for body and html */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: black;
+
+}
+
+/* Transparent sticky header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(218, 189, 167);
+    z-index: 10;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #333;
+}
+
+/* Intro section styling */
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: rgb(218, 189, 167);
+    position: relative;
+    padding-top: 60px;
+}
+
+#intro h1 {
+    font-size: 4em;
+    color: #333;
+    margin-left: 5%;
+}
+
+#intro img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 49%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50%;
+    object-fit: cover;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 0;
+    background-color: rgb(157, 130, 130);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Positioning the 'Get in touch' button */
+.get-in-touch {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+/* Sections styling */
+#about,
+#works,
+#contact {
+    padding: 60px 20px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.left-container,
+.right-container {
+    width: 48%;
+}
+
+.experience,
+.competence-section,
+.education {
+    width: 100%;
+}
+
+.title,
+.degree,
+.date,
+.description {
+    font-style: normal;
+}
+
+/* Experience and Education blocks */
+.experience,
+.education {
+    width: calc(50% - 10px);
+    position: relative;
+}
+
+/* Styling for section titles like 'Sales Assistant' and 'Stockholm University' */
+.experience h4,
+.education h4 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Thick line for section titles */
+.experience h4::before,
+.education h4::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.title,
+.degree {
+    font-size: 18px;
+}
+
+.date {
+    font-size: 16px;
+    color: #666;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.competence-section {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.competence-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.comptence-column {
+    width: 50%;
+}
+
+.competence {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #666;
+    font-weight: normal;
+}
+
+p {
+    font-size: 40px;
+    font-style: italic;
+}
+
+#works figure {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#works img {
+    width: 20%;
+    margin: 20px;
+    height: auto;
+}
+
+#contact,
+footer {
+    background-color: rgb(218, 189, 167);
+}
+
+#contact .contact-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#contact .contact-links ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact .contact-links ul li {
+    padding-bottom: 10px;
+}
+
+#contact .contact-links ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-links p {
+    font-size: 20px;
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact .contact-info,
+#contact .contact-links {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Ensure the ul for connect takes no additional space */
+#contact .contact-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    /* Anpassa layout och storlek på element för tablet */
+    .resume-container,
+    .competence-container,
+    .contact-content,
+    #works figure {
+        flex-direction: column;
+    }
+
+    #intro img,
+    .button {
+        width: 50%;
+        max-width: none;
+    }
+
+}
+
+/* Mobil-stilar */
+@media only screen and (max-width: 768px) {
+
+    /* Anpassa layout och storlek på element för mobil */
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container,
+    .competence-column {
+        width: 100%;
+    }
+
+    #intro h1 {
+        font-size: 2em;
+    }
+}
